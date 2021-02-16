@@ -24,6 +24,7 @@ class AuthInput extends StatelessWidget {
     return TextFormField(
       style: const TextStyle(color: Colors.white),
       autocorrect: false,
+      autovalidateMode: AutovalidateMode.onUserInteraction,
       keyboardType: keyboardType,
       keyboardAppearance: Brightness.light,
       textInputAction: textInputAction,
@@ -32,6 +33,7 @@ class AuthInput extends StatelessWidget {
       cursorColor: Colors.white,
       decoration: InputDecoration(
           focusColor: Colors.white,
+          suffixStyle: const TextStyle(color: Colors.red),
           labelStyle:
               Theme.of(context).textTheme.caption.copyWith(color: Colors.white),
           enabledBorder: _border(),

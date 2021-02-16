@@ -17,7 +17,7 @@ class CustomAppBar extends StatelessWidget {
             FontAwesomeIcons.chevronLeft,
             color: Colors.white,
           ),
-          onPressed: () => Navigator.of(context).pop()),
+          onPressed: () => Navigator.pushReplacementNamed(context, '/landing')),
     );
   }
 }

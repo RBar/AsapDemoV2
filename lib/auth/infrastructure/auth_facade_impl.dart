@@ -1,9 +1,13 @@
+// Flutter imports:
+import 'package:flutter/foundation.dart';
+
+// Package imports:
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/foundation.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:injectable/injectable.dart';
 
+// Project imports:
 import '../core/errors/failures.dart';
 import '../domain/i_auth_facade.dart';
 import '../domain/user.dart';

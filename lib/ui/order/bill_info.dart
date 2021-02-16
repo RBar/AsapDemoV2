@@ -1,12 +1,17 @@
+// Flutter imports:
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+// Package imports:
+import 'package:provider/provider.dart';
+
+// Project imports:
 import 'package:asapdemo/provider/order_selected.dart';
 import 'package:asapdemo/ui/order/manual_adjustment_button_info.dart';
 import 'package:asapdemo/ui/order/manual_adjustment_form.dart';
 import 'package:asapdemo/ui/order/spaced_between_row.dart';
 import 'package:asapdemo/ui/order/total_cost_row.dart';
 import 'package:asapdemo/ui/shared/custom_divider.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class BillInfo extends StatefulWidget {
   const BillInfo({Key key}) : super(key: key);

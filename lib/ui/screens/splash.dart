@@ -1,6 +1,11 @@
-import 'package:asapdemo/auth/application/auth_bloc/auth_bloc.dart';
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+// Project imports:
+import 'package:asapdemo/auth/application/auth_bloc/auth_bloc.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key key}) : super(key: key);

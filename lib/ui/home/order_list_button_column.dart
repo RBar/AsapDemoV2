@@ -1,6 +1,9 @@
+// Flutter imports:
+import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:asapdemo/ui/helpers/color_palette.dart';
 import 'package:asapdemo/ui/home/order_button.dart';
-import 'package:flutter/material.dart';
 
 class OrderListButtonsColumn extends StatelessWidget {
   final bool active;

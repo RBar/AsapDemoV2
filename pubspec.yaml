@@ -45,7 +45,7 @@ dependencies:
   google_fonts: ^1.1.2
   flutter_svg: ^0.19.1
   shimmer: ^1.0.1
-
+  import_sorter: ^4.4.1
 
 dev_dependencies:
   flutter_test:
@@ -75,6 +75,7 @@ flutter:
     - assets/images/error.svg
     - assets/images/orders_image.svg
     - assets/images/orders_image.png
+    - assets/images/google.svg.webp
     - assets/images/placeholder.png
     - assets/google_fonts/
   # An image asset can refer to one or more resolution-specific "variants", see

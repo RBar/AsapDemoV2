@@ -1,6 +1,9 @@
-import 'package:asapdemo/domain/entities/product_entity.dart';
+// Package imports:
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+
+// Project imports:
+import 'package:asapdemo/domain/entities/product_entity.dart';
 
 part 'product_model.freezed.dart';
 part 'product_model.g.dart';

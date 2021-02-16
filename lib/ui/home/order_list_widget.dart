@@ -1,8 +1,11 @@
+// Flutter imports:
+import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:asapdemo/ui/home/order_info_column.dart';
 import 'package:asapdemo/ui/home/order_list_button_column.dart';
 import 'package:asapdemo/ui/shared/constrained_widget.dart';
 import 'package:asapdemo/ui/shared/custom_divider.dart';
-import 'package:flutter/material.dart';
 
 class OrderListWidget extends StatelessWidget {
   final bool active;

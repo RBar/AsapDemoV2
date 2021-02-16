@@ -1,9 +1,15 @@
-import 'package:asapdemo/ui/helpers/color_palette.dart';
-import 'package:asapdemo/ui/shared/auth/auth_button.dart';
-import 'package:asapdemo/ui/shared/logo_image.dart';
+// Flutter imports:
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+// Package imports:
 import 'package:flutter_svg/flutter_svg.dart';
+
+// Project imports:
+import 'package:asapdemo/ui/helpers/color_palette.dart';
+import 'package:asapdemo/ui/shared/auth/auth_button.dart';
+import 'package:asapdemo/ui/shared/auth/google_button.dart';
+import 'package:asapdemo/ui/shared/logo_image.dart';
 
 class LandingColumn extends StatelessWidget {
   const LandingColumn({Key key}) : super(key: key);
@@ -52,8 +58,22 @@ class LandingColumn extends StatelessWidget {
             Navigator.pushNamed(context, '/signup');
           },
         ),
+        const SizedBox(
+          height: 20,
+        ),
         SizedBox(
-          height: size.height * 0.25,
+          width: size.width * 0.30,
+          child: const Divider(
+            thickness: 1,
+            color: Color(0xffaba9a9),
+          ),
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        const GoogleButton(),
+        SizedBox(
+          height: size.height * 0.15,
         ),
       ],
     );

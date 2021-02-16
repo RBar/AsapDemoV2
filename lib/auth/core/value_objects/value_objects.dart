@@ -1,6 +1,8 @@
+// Package imports:
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+// Project imports:
 import '../errors/errors.dart';
 import '../errors/failures.dart';
 

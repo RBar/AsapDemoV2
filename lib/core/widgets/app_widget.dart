@@ -1,11 +1,15 @@
+// Flutter imports:
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+
+// Package imports:
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+// Project imports:
 import 'package:asapdemo/auth/application/auth_bloc/auth_bloc.dart';
 import 'package:asapdemo/auth/application/sign_in_bloc/signinform_bloc.dart';
 import 'package:asapdemo/core/widgets/firebase_initializer.dart';
 import 'package:asapdemo/injection.dart';
-
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({Key key}) : super(key: key);

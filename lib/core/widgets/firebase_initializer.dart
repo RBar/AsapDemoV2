@@ -1,6 +1,11 @@
-import 'package:asapdemo/core/widgets/my_app.dart';
-import 'package:firebase_core/firebase_core.dart';
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
+import 'package:firebase_core/firebase_core.dart';
+
+// Project imports:
+import 'package:asapdemo/core/widgets/my_app.dart';
 
 class FirebaseChecker extends StatelessWidget {
   const FirebaseChecker({Key key}) : super(key: key);

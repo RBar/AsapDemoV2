@@ -1,5 +1,8 @@
-import 'package:asapdemo/ui/helpers/color_palette.dart';
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
+import 'package:asapdemo/ui/helpers/color_palette.dart';
 
 class ManualAdjustmentButtonInfo extends StatelessWidget {
   const ManualAdjustmentButtonInfo({Key key}) : super(key: key);

@@ -1,10 +1,13 @@
+// Flutter imports:
+import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:asapdemo/ui/helpers/color_palette.dart';
 import 'package:asapdemo/ui/shared/auth/auth_button.dart';
 import 'package:asapdemo/ui/shared/auth/auth_email_input.dart';
 import 'package:asapdemo/ui/shared/auth/auth_password_input.dart';
 import 'package:asapdemo/ui/shared/auth/auth_text_already_have_or_create.dart';
-import 'package:flutter/material.dart';
-
+import 'package:asapdemo/ui/shared/auth/google_button.dart';
 import 'package:asapdemo/ui/shared/logo_image.dart';
 
 class LoginSignupColumnWidget extends StatelessWidget {
@@ -68,11 +71,16 @@ class LoginSignupColumnWidget extends StatelessWidget {
               if (pageText == "Log In")
                 SizedBox(
                   width: size.width * 0.75,
-                  child: const Text(
-                    "Forgot password?",
-                    textAlign: TextAlign.right,
-                    style: TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.w700),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/forgot');
+                    },
+                    child: const Text(
+                      "Forgot password?",
+                      textAlign: TextAlign.right,
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.w700),
+                    ),
                   ),
                 ),
               const SizedBox(
@@ -88,8 +96,22 @@ class LoginSignupColumnWidget extends StatelessWidget {
                 text: buttonName,
                 onPressed: onPressed,
               ),
+              const SizedBox(
+                height: 10,
+              ),
               SizedBox(
-                height: size.height * 0.25,
+                width: size.width * 0.30,
+                child: const Divider(
+                  thickness: 1,
+                  color: Color(0xffaba9a9),
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const GoogleButton(),
+              SizedBox(
+                height: size.height * 0.13,
               ),
             ],
           ),

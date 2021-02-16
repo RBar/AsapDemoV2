@@ -1,8 +1,11 @@
+// Package imports:
+import 'package:dartz/dartz.dart';
+import 'package:injectable/injectable.dart';
+
+// Project imports:
 import 'package:asapdemo/core/errors/failures.dart';
 import 'package:asapdemo/domain/entities/product_entity.dart';
 import 'package:asapdemo/domain/repository/asapdemo_repository.dart';
-import 'package:dartz/dartz.dart';
-import 'package:injectable/injectable.dart';
 
 @injectable
 class GetProduct {

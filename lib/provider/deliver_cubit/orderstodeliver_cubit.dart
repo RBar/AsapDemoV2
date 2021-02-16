@@ -1,8 +1,11 @@
-import 'package:asapdemo/domain/entities/order_list_entity.dart';
-import 'package:asapdemo/domain/repository/asapdemo_repository.dart';
+// Package imports:
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
+
+// Project imports:
+import 'package:asapdemo/domain/entities/order_list_entity.dart';
+import 'package:asapdemo/domain/repository/asapdemo_repository.dart';
 
 part 'orderstodeliver_state.dart';
 part 'orderstodeliver_cubit.freezed.dart';

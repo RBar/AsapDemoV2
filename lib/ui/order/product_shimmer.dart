@@ -1,7 +1,12 @@
+// Flutter imports:
+import 'package:flutter/material.dart';
+
+// Package imports:
+import 'package:shimmer/shimmer.dart';
+
+// Project imports:
 import 'package:asapdemo/ui/helpers/color_palette.dart';
 import 'package:asapdemo/ui/shared/custom_divider.dart';
-import 'package:flutter/material.dart';
-import 'package:shimmer/shimmer.dart';
 
 class ProductShimmer extends StatelessWidget {
   const ProductShimmer({Key key}) : super(key: key);

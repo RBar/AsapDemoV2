@@ -1,7 +1,11 @@
-import 'package:asapdemo/ui/helpers/color_palette.dart';
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+// Project imports:
+import 'package:asapdemo/ui/helpers/color_palette.dart';
 import 'drawer_list_tile_item.dart';
 import 'drawer_menu_switch.dart';
 

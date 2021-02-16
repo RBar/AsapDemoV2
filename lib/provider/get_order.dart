@@ -1,9 +1,11 @@
-import 'package:asapdemo/core/errors/failures.dart';
-import 'package:asapdemo/domain/entities/order_entity.dart';
-
-import 'package:asapdemo/domain/repository/asapdemo_repository.dart';
+// Package imports:
 import 'package:dartz/dartz.dart';
 import 'package:injectable/injectable.dart';
+
+// Project imports:
+import 'package:asapdemo/core/errors/failures.dart';
+import 'package:asapdemo/domain/entities/order_entity.dart';
+import 'package:asapdemo/domain/repository/asapdemo_repository.dart';
 
 @injectable
 class GetOrder {

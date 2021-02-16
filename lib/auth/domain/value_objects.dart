@@ -1,8 +1,11 @@
+// Package imports:
+import 'package:dartz/dartz.dart';
+import 'package:uuid/uuid.dart';
+
+// Project imports:
 import 'package:asapdemo/auth/core/errors/failures.dart';
 import 'package:asapdemo/auth/core/validators/value_validator.dart';
 import 'package:asapdemo/auth/core/value_objects/value_objects.dart';
-import 'package:dartz/dartz.dart';
-import 'package:uuid/uuid.dart';
 
 class EmailAddress extends ValueObject<String> {
   @override

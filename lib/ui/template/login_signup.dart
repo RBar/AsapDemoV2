@@ -1,12 +1,15 @@
+// Flutter imports:
+import 'package:flutter/material.dart';
+
+// Package imports:
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+// Project imports:
 import 'package:asapdemo/auth/application/sign_in_bloc/signinform_bloc.dart';
 import 'package:asapdemo/ui/shared/auth/app_bar.dart';
 import 'package:asapdemo/ui/shared/auth/auth_background.dart';
-
 import 'package:asapdemo/ui/template/login_signup/bloc_auth_errors_consumer.dart';
 import 'package:asapdemo/ui/template/login_signup/login_signup_column.dart';
-
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginSignupTemplate extends StatelessWidget {
   final String loginOrSignup;

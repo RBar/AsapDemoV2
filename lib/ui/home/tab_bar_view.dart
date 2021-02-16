@@ -1,6 +1,8 @@
-import 'package:asapdemo/ui/home/tab_active_and_past_orders.dart';
-
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
+import 'package:asapdemo/ui/home/tab_active_and_past_orders.dart';
 
 class HomeTabBarView extends StatelessWidget {
   final TabController controller;

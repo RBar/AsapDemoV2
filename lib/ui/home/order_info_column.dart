@@ -1,14 +1,17 @@
+// Flutter imports:
+import 'package:flutter/material.dart';
+
+// Package imports:
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shimmer/shimmer.dart';
+
+// Project imports:
 import 'package:asapdemo/domain/entities/order_list_entity.dart';
 import 'package:asapdemo/provider/deliver_cubit/orderstodeliver_cubit.dart';
 import 'package:asapdemo/provider/delivered_cubit/delivered_order_cubit.dart';
 import 'package:asapdemo/ui/helpers/color_palette.dart';
 import 'package:asapdemo/ui/shared/drawer/error_container.dart';
 import 'package:asapdemo/ui/shared/multibloc_widget.dart';
-
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-import 'package:shimmer/shimmer.dart';
 
 class OrderInfoColumn extends StatelessWidget {
   final int index;

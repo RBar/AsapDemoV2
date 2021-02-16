@@ -1,17 +1,20 @@
-import 'package:asapdemo/domain/entities/order_list_entity.dart';
+// Flutter imports:
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
+// Package imports:
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+// Project imports:
+import 'package:asapdemo/domain/entities/order_list_entity.dart';
 import 'package:asapdemo/provider/deliver_cubit/orderstodeliver_cubit.dart';
 import 'package:asapdemo/provider/delivered_cubit/delivered_order_cubit.dart';
 import 'package:asapdemo/ui/home/no_orders_image.dart';
-
 import 'package:asapdemo/ui/home/order_list_widget.dart';
 import 'package:asapdemo/ui/screens/order.dart';
 import 'package:asapdemo/ui/shared/drawer/error_container.dart';
 import 'package:asapdemo/ui/shared/loading_widget.dart';
 import 'package:asapdemo/ui/shared/multibloc_widget.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ActiveAndPastOrdersWidget extends StatelessWidget {
   final bool active;

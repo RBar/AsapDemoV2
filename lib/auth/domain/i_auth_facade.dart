@@ -1,7 +1,11 @@
-import 'package:asapdemo/auth/core/errors/failures.dart';
-import 'package:dartz/dartz.dart';
+// Flutter imports:
 import 'package:flutter/foundation.dart';
 
+// Package imports:
+import 'package:dartz/dartz.dart';
+
+// Project imports:
+import 'package:asapdemo/auth/core/errors/failures.dart';
 import 'user.dart';
 import 'value_objects.dart';
 

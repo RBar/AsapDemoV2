@@ -1,16 +1,19 @@
+// Package imports:
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:dartz/dartz.dart';
+import 'package:injectable/injectable.dart';
+
+// Project imports:
 import 'package:asapdemo/core/errors/exceptions.dart';
+import 'package:asapdemo/core/errors/failures.dart';
 import 'package:asapdemo/core/network/network_info.dart';
 import 'package:asapdemo/data/models/order_list_model.dart';
 import 'package:asapdemo/data/models/order_model.dart';
 import 'package:asapdemo/data/models/product_model.dart';
-import 'package:asapdemo/domain/entities/order_list_entity.dart';
 import 'package:asapdemo/domain/entities/order_entity.dart';
-import 'package:asapdemo/core/errors/failures.dart';
+import 'package:asapdemo/domain/entities/order_list_entity.dart';
 import 'package:asapdemo/domain/entities/product_entity.dart';
 import 'package:asapdemo/domain/repository/asapdemo_repository.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:dartz/dartz.dart';
-import 'package:injectable/injectable.dart';
 
 @LazySingleton(as: IAsapDemoRepository)
 class AsapDemoRepositoryImpl implements IAsapDemoRepository {

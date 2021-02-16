@@ -1,5 +1,8 @@
-import 'package:asapdemo/ui/shared/background_container.dart';
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
+import 'package:asapdemo/ui/shared/background_container.dart';
 
 class AuthBackgroundWidget extends StatelessWidget {
   final Widget child;

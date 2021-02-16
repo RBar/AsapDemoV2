@@ -1,5 +1,7 @@
+// Package imports:
 import 'package:dartz/dartz.dart';
 
+// Project imports:
 import '../errors/failures.dart';
 
 Either<ValueFailure<String>, String> validateEmailAddress(String input) {

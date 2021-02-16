@@ -1,6 +1,9 @@
-import 'package:asapdemo/domain/entities/order_list_entity.dart';
+// Package imports:
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+
+// Project imports:
+import 'package:asapdemo/domain/entities/order_list_entity.dart';
 
 part 'order_list_model.freezed.dart';
 part 'order_list_model.g.dart';

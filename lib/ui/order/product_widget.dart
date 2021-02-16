@@ -1,14 +1,18 @@
-import 'package:asapdemo/ui/shared/custom_divider.dart';
-import 'package:asapdemo/ui/shared/drawer/error_container.dart';
-import 'package:dartz/dartz.dart';
+// Flutter imports:
 import 'package:flutter/material.dart';
 
+// Package imports:
+import 'package:dartz/dartz.dart';
+
+// Project imports:
 import 'package:asapdemo/core/errors/failures.dart';
 import 'package:asapdemo/domain/entities/product_entity.dart';
 import 'package:asapdemo/injection.dart';
 import 'package:asapdemo/provider/get_product.dart';
 import 'package:asapdemo/ui/order/product_name_and_cost_row.dart';
 import 'package:asapdemo/ui/shared/constrained_widget.dart';
+import 'package:asapdemo/ui/shared/custom_divider.dart';
+import 'package:asapdemo/ui/shared/drawer/error_container.dart';
 
 class ProductWidget extends StatelessWidget {
   final int barCode;

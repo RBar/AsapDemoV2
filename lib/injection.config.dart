@@ -4,27 +4,29 @@
 // InjectableConfigGenerator
 // **************************************************************************
 
-import 'package:http/http.dart';
+// Package imports:
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:data_connection_checker/data_connection_checker.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get_it/get_it.dart';
-import 'package:injectable/injectable.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:http/http.dart';
+import 'package:injectable/injectable.dart';
 
-import 'core/injection_third_party/injection_third_party.dart';
-import 'data/repository_impl.dart';
+// Project imports:
 import 'auth/application/auth_bloc/auth_bloc.dart';
+import 'auth/application/sign_in_bloc/signinform_bloc.dart';
+import 'auth/core/injection/third_party_injection.dart';
+import 'auth/domain/i_auth_facade.dart';
 import 'auth/infrastructure/auth_facade_impl.dart';
+import 'core/injection_third_party/injection_third_party.dart';
+import 'core/network/network_info.dart';
+import 'data/repository_impl.dart';
+import 'domain/repository/asapdemo_repository.dart';
+import 'provider/deliver_cubit/orderstodeliver_cubit.dart';
 import 'provider/delivered_cubit/delivered_order_cubit.dart';
 import 'provider/get_order.dart';
 import 'provider/get_product.dart';
-import 'domain/repository/asapdemo_repository.dart';
-import 'auth/domain/i_auth_facade.dart';
-import 'core/network/network_info.dart';
-import 'provider/deliver_cubit/orderstodeliver_cubit.dart';
-import 'auth/application/sign_in_bloc/signinform_bloc.dart';
-import 'auth/core/injection/third_party_injection.dart';
 
 /// adds generated dependencies
 /// to the provided [GetIt] instance

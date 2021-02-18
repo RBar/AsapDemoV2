@@ -1,5 +1,4 @@
 // Flutter imports:
-import 'package:asapdemo/ui/shared/error_container.dart';
 import 'package:flutter/material.dart';
 
 // Package imports:
@@ -13,6 +12,7 @@ import 'package:asapdemo/provider/get_product.dart';
 import 'package:asapdemo/ui/order/product_name_and_cost_row.dart';
 import 'package:asapdemo/ui/shared/constrained_widget.dart';
 import 'package:asapdemo/ui/shared/custom_divider.dart';
+import 'package:asapdemo/ui/shared/error_container.dart';
 
 class ProductWidget extends StatelessWidget {
   final int barCode;

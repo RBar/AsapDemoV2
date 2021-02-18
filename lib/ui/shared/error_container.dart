@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+// Project imports:
+import 'package:asapdemo/core/routes/routes.dart';
+
 class ErrorContainer extends StatelessWidget {
   const ErrorContainer({Key key}) : super(key: key);
 
@@ -41,7 +44,7 @@ class ErrorContainer extends StatelessWidget {
         FlatButton(
           onPressed: () {
             Navigator.pushNamedAndRemoveUntil(
-                context, '/home', (Route<dynamic> route) => false);
+                context, Routes.home, (Route<dynamic> route) => false);
           },
           color: Colors.transparent,
           child: Column(

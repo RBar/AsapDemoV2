@@ -1,12 +1,13 @@
 // Flutter imports:
-import 'package:asapdemo/auth/application/auth_bloc/auth_bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 // Package imports:
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 // Project imports:
+import 'package:asapdemo/auth/application/auth_bloc/auth_bloc.dart';
+import 'package:asapdemo/core/routes/routes.dart';
 import 'package:asapdemo/ui/helpers/color_palette.dart';
 import 'drawer_list_tile_item.dart';
 import 'drawer_menu_switch.dart';
@@ -80,7 +81,7 @@ class DrawerItemsColumn extends StatelessWidget {
                 onPressed: () {
                   context.read<AuthBloc>().add(const AuthEvent.signedOut());
                   Navigator.pushNamedAndRemoveUntil(
-                      context, '/', (Route<dynamic> route) => false);
+                      context, Routes.splash, (Route<dynamic> route) => false);
                 },
                 child: const Text(
                   'Yes',

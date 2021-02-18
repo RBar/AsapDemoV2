@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
+import 'package:asapdemo/core/routes/routes.dart';
 import 'package:asapdemo/ui/helpers/color_palette.dart';
 import 'package:asapdemo/ui/shared/auth/auth_button.dart';
 import 'package:asapdemo/ui/shared/auth/auth_email_input.dart';
@@ -73,7 +74,7 @@ class LoginSignupColumnWidget extends StatelessWidget {
                   width: size.width * 0.75,
                   child: InkWell(
                     onTap: () {
-                      Navigator.pushNamed(context, '/forgot');
+                      Navigator.pushNamed(context, Routes.forgot);
                     },
                     child: const Text(
                       "Forgot password?",

@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 // Project imports:
+import 'package:asapdemo/core/routes/routes.dart';
 import 'package:asapdemo/ui/helpers/color_palette.dart';
 import 'package:asapdemo/ui/shared/auth/auth_button.dart';
 import 'package:asapdemo/ui/shared/auth/google_button.dart';
@@ -41,7 +42,7 @@ class LandingColumn extends StatelessWidget {
               ]),
           text: "Login",
           onPressed: () {
-            Navigator.pushNamed(context, '/login');
+            Navigator.pushNamed(context, Routes.login);
           },
         ),
         const SizedBox(
@@ -55,7 +56,7 @@ class LandingColumn extends StatelessWidget {
           ),
           text: "Sign Up",
           onPressed: () {
-            Navigator.pushNamed(context, '/signup');
+            Navigator.pushNamed(context, Routes.signup);
           },
         ),
         const SizedBox(

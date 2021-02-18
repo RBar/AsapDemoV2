@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // Project imports:
+import 'package:asapdemo/core/routes/routes.dart';
 import 'package:asapdemo/ui/screens/home.dart';
 import 'package:asapdemo/ui/screens/landing.dart';
 import 'package:asapdemo/ui/screens/login.dart';
@@ -33,15 +34,15 @@ class Myapp extends StatelessWidget {
               ),
         ),
       ),
-      initialRoute: '/',
+      initialRoute: Routes.splash,
       routes: {
-        '/': (context) => const SplashScreen(),
-        '/login': (context) => const LoginScreen(),
-        '/landing': (context) => const LandingScreen(),
-        '/home': (context) => const HomeScreen(),
-        '/signup': (context) => const SignUpScreen(),
-        '/order': (context) => const OrderScreen(),
-        '/forgot': (context) => const ForgotPasswordScreen(),
+        Routes.splash: (context) => const SplashScreen(),
+        Routes.login: (context) => const LoginScreen(),
+        Routes.landing: (context) => const LandingScreen(),
+        Routes.home: (context) => const HomeScreen(),
+        Routes.signup: (context) => const SignUpScreen(),
+        Routes.order: (context) => const OrderScreen(),
+        Routes.forgot: (context) => const ForgotPasswordScreen(),
       },
     );
   }

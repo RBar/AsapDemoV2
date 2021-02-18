@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 // Project imports:
 import 'package:asapdemo/auth/application/auth_bloc/auth_bloc.dart';
+import 'package:asapdemo/core/routes/routes.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key key}) : super(key: key);
@@ -19,11 +20,11 @@ class SplashScreen extends StatelessWidget {
             initial: (_) {},
             authenticated: (_) {
               Navigator.pushNamedAndRemoveUntil(
-                  context, '/home', (Route<dynamic> route) => false);
+                  context, Routes.home, (Route<dynamic> route) => false);
             },
             unauthenticated: (_) {
               Navigator.pushNamedAndRemoveUntil(
-                  context, '/landing', (Route<dynamic> route) => false);
+                  context, Routes.landing, (Route<dynamic> route) => false);
             });
       },
       child: const Scaffold(

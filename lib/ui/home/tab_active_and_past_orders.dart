@@ -1,5 +1,4 @@
 // Flutter imports:
-import 'package:asapdemo/ui/shared/error_container.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -7,12 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 // Project imports:
+import 'package:asapdemo/core/routes/routes.dart';
 import 'package:asapdemo/domain/entities/order_list_entity.dart';
 import 'package:asapdemo/provider/deliver_cubit/orderstodeliver_cubit.dart';
 import 'package:asapdemo/provider/delivered_cubit/delivered_order_cubit.dart';
 import 'package:asapdemo/ui/home/no_orders_image.dart';
 import 'package:asapdemo/ui/home/order_list_widget.dart';
 import 'package:asapdemo/ui/screens/order.dart';
+import 'package:asapdemo/ui/shared/error_container.dart';
 import 'package:asapdemo/ui/shared/loading_widget.dart';
 import 'package:asapdemo/ui/shared/multibloc_widget.dart';
 
@@ -112,7 +113,7 @@ class __ListViewBlocState extends State<_ListViewBloc> {
         itemBuilder: (context, index) {
           return InkWell(
               onTap: () {
-                Navigator.pushNamed(context, '/order',
+                Navigator.pushNamed(context, Routes.order,
                     arguments: OrderScreenArguments(
                         delivered: !widget.active,
                         index: index,

@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 // Project imports:
 import 'package:asapdemo/auth/application/sign_in_bloc/signinform_bloc.dart';
+import 'package:asapdemo/core/routes/routes.dart';
 import 'package:asapdemo/ui/shared/auth/error_flushbar.dart';
 
 class BlocAuthErrorsConsumer extends StatelessWidget {
@@ -34,7 +35,7 @@ class BlocAuthErrorsConsumer extends StatelessWidget {
           },
           (_) {
             Navigator.pushNamedAndRemoveUntil(
-                context, '/home', (Route<dynamic> route) => false);
+                context, Routes.home, (Route<dynamic> route) => false);
           },
         ),
       );

@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 // Project imports:
 import 'package:asapdemo/auth/application/sign_in_bloc/signinform_bloc.dart';
+import 'package:asapdemo/core/routes/routes.dart';
 import 'package:asapdemo/ui/shared/auth/app_bar.dart';
 import 'package:asapdemo/ui/shared/auth/auth_background.dart';
 import 'package:asapdemo/ui/template/login_signup/bloc_auth_errors_consumer.dart';
@@ -43,7 +44,7 @@ class LoginSignupTemplate extends StatelessWidget {
       buttonName: "Login",
       normalText: "Don't you have an account?",
       pageText: "Log In",
-      route: '/signup',
+      route: Routes.signup,
       boldText: "Sign Up",
       onPressed: () => context.read<SigninformBloc>().add(
             const SigninformEvent.signInWithEmailAndPasswordPressed(),
@@ -56,7 +57,7 @@ class LoginSignupTemplate extends StatelessWidget {
       buttonName: "Signup",
       normalText: "Already have an account?",
       pageText: "Sign Up",
-      route: '/login',
+      route: Routes.login,
       boldText: "Log In",
       onPressed: () => context.read<SigninformBloc>().add(
             const SigninformEvent.registerWithEmailAndPasswordPressed(),

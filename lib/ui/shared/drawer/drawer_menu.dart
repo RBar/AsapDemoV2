@@ -15,7 +15,7 @@ class DrawerMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Theme(
-      data: Theme.of(context).copyWith(canvasColor: ColorPalette.lightBlue()),
+      data: Theme.of(context).copyWith(canvasColor: ColorPalette.lightPurple()),
       child: ListTileTheme(
         iconColor: Colors.white,
         child: GestureDetector(

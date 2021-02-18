@@ -19,7 +19,7 @@ class DrawerItemsColumn extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
     return Container(
       color: ColorPalette.baseBlue(),
-      height: size.height * 0.8,
+      height: size.height,
       child: Column(
         children: [
           ListTile(
@@ -48,6 +48,7 @@ class DrawerItemsColumn extends StatelessWidget {
             const ListTileItem(
                 icon: FontAwesomeIcons.truckMoving, text: "My orders"),
             const ListTileItem(icon: FontAwesomeIcons.wallet, text: "Wallet"),
+            const ListTile(),
             InkWell(
                 onTap: () => _logoutAlertDialog(context),
                 child: const ListTileItem(
@@ -55,7 +56,7 @@ class DrawerItemsColumn extends StatelessWidget {
             const Expanded(
               child: SizedBox(),
             ),
-            Text("")
+            const Text("")
           ]
         ],
       ),

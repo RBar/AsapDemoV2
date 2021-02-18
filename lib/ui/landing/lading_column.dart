@@ -41,7 +41,7 @@ class LandingColumn extends StatelessWidget {
               ]),
           text: "Login",
           onPressed: () {
-            Navigator.pushReplacementNamed(context, '/login');
+            Navigator.pushNamed(context, '/login');
           },
         ),
         const SizedBox(
@@ -55,7 +55,7 @@ class LandingColumn extends StatelessWidget {
           ),
           text: "Sign Up",
           onPressed: () {
-            Navigator.pushReplacementNamed(context, '/signup');
+            Navigator.pushNamed(context, '/signup');
           },
         ),
         const SizedBox(

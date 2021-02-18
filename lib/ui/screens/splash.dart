@@ -18,12 +18,12 @@ class SplashScreen extends StatelessWidget {
         state.map(
             initial: (_) {},
             authenticated: (_) {
-              Navigator.of(context).pushReplacementNamed(
-                '/home',
-              );
+              Navigator.pushNamedAndRemoveUntil(
+                  context, '/home', (Route<dynamic> route) => false);
             },
             unauthenticated: (_) {
-              Navigator.of(context).pushReplacementNamed('/landing');
+              Navigator.pushNamedAndRemoveUntil(
+                  context, '/landing', (Route<dynamic> route) => false);
             });
       },
       child: const Scaffold(

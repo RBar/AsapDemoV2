@@ -40,7 +40,8 @@ class ErrorContainer extends StatelessWidget {
         ),
         FlatButton(
           onPressed: () {
-            Navigator.of(context).pushReplacementNamed('/');
+            Navigator.pushNamedAndRemoveUntil(
+                context, '/home', (Route<dynamic> route) => false);
           },
           color: Colors.transparent,
           child: Column(

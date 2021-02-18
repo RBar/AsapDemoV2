@@ -33,7 +33,8 @@ class BlocAuthErrorsConsumer extends StatelessWidget {
             );
           },
           (_) {
-            Navigator.of(context).pushReplacementNamed('/home');
+            Navigator.pushNamedAndRemoveUntil(
+                context, '/home', (Route<dynamic> route) => false);
           },
         ),
       );

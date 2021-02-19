@@ -38,12 +38,11 @@ class UniqueId extends ValueObject<String> {
   final Either<ValueFailure<String>, String> value;
   factory UniqueId() {
     return UniqueId._(right(Uuid().v1()));
-  } //CREATES A NEW UNIQUE ID FOR THE NOTES
-
+  }
   factory UniqueId.fromUniqueString(String uniqueId) {
     assert(uniqueId != null);
     return UniqueId._(right(uniqueId));
-  } // STORAGE THE UNIQUE ID OF THE USER
+  }
 
   const UniqueId._(this.value);
 }

@@ -1,3 +1,5 @@
+// Routas que se utilizaran en la aplicacion
+
 // ignore: avoid_classes_with_only_static_members
 class Routes {
   static String get splash => '/';

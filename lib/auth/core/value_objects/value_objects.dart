@@ -6,6 +6,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../errors/errors.dart';
 import '../errors/failures.dart';
 
+// Clase abstracta que sirve para los value objects, sobreescribe el tostring  y demas para conceptos de igualdad
+
 @immutable
 abstract class ValueObject<T> {
   const ValueObject();

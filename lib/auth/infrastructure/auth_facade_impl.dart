@@ -21,11 +21,14 @@ class AuthFacadeImpl implements IAuthFacade {
 
   AuthFacadeImpl(this._firebaseAuth, this._googleSignIn);
 
+  // metodo utilizado para registrar usuario con email and password
   @override
   Future<Either<AuthFailure, Unit>> registerWithEmailAndPassword({
     @required EmailAddress emailAddress,
     @required Password password,
   }) async {
+    // se utiliza el getOrcrash porque si en este punto tenemos un email o password incorrecto es porque algo
+    // mal ha sucedido en el funcionamiento de la app y tiramos un error.
     final emailAddressStr = emailAddress.getOrCrash();
     final passwordStr = password.getOrCrash();
     try {
@@ -40,11 +43,14 @@ class AuthFacadeImpl implements IAuthFacade {
     }
   }
 
+  // Metodo para logearnos con email and password
   @override
   Future<Either<AuthFailure, Unit>> signInWithEmailAndPassword({
     @required EmailAddress emailAddress,
     @required Password password,
   }) async {
+    // se utiliza el getOrcrash porque si en este punto tenemos un email o password incorrecto es porque algo
+    // mal ha sucedido en el funcionamiento de la app y tiramos un error.
     final emailAddressStr = emailAddress.getOrCrash();
     final passwordStr = password.getOrCrash();
     try {
@@ -59,6 +65,7 @@ class AuthFacadeImpl implements IAuthFacade {
     }
   }
 
+  // Metodo para logearnos con google
   @override
   Future<Either<AuthFailure, Unit>> signInWithGoogle() async {
     try {
@@ -77,11 +84,13 @@ class AuthFacadeImpl implements IAuthFacade {
     }
   }
 
+  // Metodo para obtener el usuario logeado
   @override
   Future<Option<AUser>> getSignedUser() async {
     return optionOf(_firebaseAuth.currentUser?.toDomain());
   }
 
+  // Metodo para signOut
   @override
   Future<void> signOut() async => Future.wait([
         _googleSignIn.signOut(),
@@ -89,6 +98,7 @@ class AuthFacadeImpl implements IAuthFacade {
       ]); // same to do this     // await _googleSignIn.signOut();
   // await _firebaseAuth.signOut();
 
+  // Metodo para resetear el password con el email
   @override
   Future<Either<AuthFailure, Unit>> resetPasswordWithEmail(
       {EmailAddress emailAddress}) async {

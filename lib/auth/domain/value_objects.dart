@@ -7,6 +7,8 @@ import 'package:asapdemo/auth/core/errors/failures.dart';
 import 'package:asapdemo/auth/core/validators/value_validator.dart';
 import 'package:asapdemo/auth/core/value_objects/value_objects.dart';
 
+// Estos values objects permiten que los illegal statements  inrepresentables, realizando la validacion en estos objetos.
+
 class EmailAddress extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
@@ -32,6 +34,8 @@ class Password extends ValueObject<String> {
 
   const Password._(this.value);
 }
+
+// Crea uniqueID para las ordenes y lo que necesite un unique id.
 
 class UniqueId extends ValueObject<String> {
   @override

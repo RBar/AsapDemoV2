@@ -7,6 +7,7 @@ import 'package:asapdemo/core/errors/failures.dart';
 import 'package:asapdemo/domain/entities/product_entity.dart';
 import 'package:asapdemo/domain/repository/asapdemo_repository.dart';
 
+// retorna un producto en especifico
 @injectable
 class GetProduct {
   final IAsapDemoRepository repository;

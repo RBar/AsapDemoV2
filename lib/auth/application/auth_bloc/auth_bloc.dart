@@ -26,11 +26,15 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     AuthEvent event,
   ) async* {
     yield* event.map(authCheckRequested: (event) async* {
+      // Emitimos el inicial para que se de el cambio de estado.
       yield const AuthState.initial();
+      // Obtenemos el usuario logeado
       final userOption = await authFacade.getSignedUser();
+      // Si tenemos un usuario emitimos autenticado en caso contratio unautenticado
       yield userOption.fold(() => const AuthState.unauthenticated(),
           (user) => AuthState.authenticated(user: user));
     }, signedOut: (event) async* {
+      // Nos deslogeamos y emitimos unautenticado
       await authFacade.signOut();
       yield const AuthState.unauthenticated();
     });

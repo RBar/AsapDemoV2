@@ -23,6 +23,7 @@ abstract class OrderListModel implements _$OrderListModel {
   factory OrderListModel.fromJson(Map<String, dynamic> json) =>
       _$OrderListModelFromJson(json);
   const OrderListModel._();
+  // transforma models to entities
   OrderListEntity toDomain() => OrderListEntity(
       user: user,
       address: address,
@@ -33,6 +34,7 @@ abstract class OrderListModel implements _$OrderListModel {
       ordersCount: ordersCount);
 }
 
+// Transforma de la informacion proveniente de firebase
 class OrderListModels {
   final List<OrderListModel> items = [];
   OrderListModels.fromJsonList(QuerySnapshot jsonList) {

@@ -6,6 +6,8 @@ import 'value_objects.dart';
 
 part 'user.freezed.dart';
 
+// Modelo para el usuario proveniente de firebase
+
 @freezed
 abstract class AUser with _$AUser {
   const factory AUser({

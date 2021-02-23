@@ -1,6 +1,7 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
 
+// Colores utilizados para la app
 class ColorPalette {
   static Color baseBlue() {
     return const Color.fromRGBO(21, 0, 142, 1);

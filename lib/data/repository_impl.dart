@@ -17,7 +17,7 @@ import 'package:asapdemo/domain/repository/asapdemo_repository.dart';
 
 @LazySingleton(as: IAsapDemoRepository)
 class AsapDemoRepositoryImpl implements IAsapDemoRepository {
-  final NetworkInfo networkInfo;
+  final NetworkInfo networkInfo; // internet checker
   final FirebaseFirestore firestore;
 
   AsapDemoRepositoryImpl(this.networkInfo, this.firestore);
@@ -33,9 +33,9 @@ class AsapDemoRepositoryImpl implements IAsapDemoRepository {
         if (resp.docs == null || resp.docs.isEmpty) {
           return left(const Failure.unexpectedFailure());
         }
-
+        // se transforma la informacion de firebase a una lista de modelos
         final product = OrderModels.fromJsonList(resp);
-
+        // se retorna solo el primer modelo, conviertiendolo a domain
         return right(product.items
             .map((productModel) => productModel.toDomain())
             .toList()[0]);

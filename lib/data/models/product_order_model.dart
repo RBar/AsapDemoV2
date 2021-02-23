@@ -17,10 +17,12 @@ abstract class ProductOrderModel implements _$ProductOrderModel {
   factory ProductOrderModel.fromJson(Map<String, dynamic> json) =>
       _$ProductOrderModelFromJson(json);
   const ProductOrderModel._();
+  // transforma models to entities
   ProductOrderEntity toDomain() =>
       ProductOrderEntity(barCode: barCode, quantity: quantity);
 }
 
+// Transforma de la informacion proveniente de firebase
 class ProductOrderModels {
   final List<ProductOrderModel> items = [];
   ProductOrderModels.fromJsonList(QuerySnapshot jsonList) {

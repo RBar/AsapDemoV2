@@ -19,10 +19,12 @@ abstract class ProductModel implements _$ProductModel {
       _$ProductModelFromJson(json);
 
   const ProductModel._();
+  // transforma models to entities
   ProductEntity toDomain() =>
       ProductEntity(barCode: barCode, name: name, price: price);
 }
 
+// Transforma de la informacion proveniente de firebase
 class ProductModels {
   final List<ProductModel> items = [];
   ProductModels.fromJsonList(QuerySnapshot jsonList) {

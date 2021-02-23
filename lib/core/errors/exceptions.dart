@@ -1,6 +1,6 @@
-class ServerException implements Exception {}
+// Posibles execepciones que manejaremos en la app
 
-class CacheException implements Exception {}
+class ServerException implements Exception {}
 
 class NoConnectionException implements Exception {}
 

@@ -4,6 +4,8 @@ import 'package:dartz/dartz.dart';
 // Project imports:
 import '../errors/failures.dart';
 
+// Funciones para validar el email y el password
+
 Either<ValueFailure<String>, String> validateEmailAddress(String input) {
   const emailRegex =
       r"""^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+""";

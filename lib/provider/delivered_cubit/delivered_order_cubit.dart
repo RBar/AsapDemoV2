@@ -16,9 +16,12 @@ class DeliveredOrdersCubit extends Cubit<DeliveredOrderState> {
   DeliveredOrdersCubit(this._asapDemoRepository)
       : super(const DeliveredOrderState.initial());
 
+  // obtiene las ordenes que se han entregado
   Future<void> getDeliveredOrders() async {
     emit(const DeliveredOrderState.loading());
     final failureOrSucces = await _asapDemoRepository.getDeliveredOrdersList();
+    // en caso de que me haya retornado un failure devolvemos el estado de error
+    // caso contratio retonamos el estado loaded
     emit(failureOrSucces.fold(
       (l) => const DeliveredOrderState.error(),
       (orders) => DeliveredOrderState.loaded(ordersList: orders),

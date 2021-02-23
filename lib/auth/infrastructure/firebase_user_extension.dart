@@ -5,6 +5,8 @@ import 'package:firebase_auth/firebase_auth.dart' as firebase;
 import '../domain/user.dart';
 import '../domain/value_objects.dart';
 
+//Extension que transforma el usuario de firebase a un Usuario de nuestra aplicacion.
+
 extension FirebaseUserDomainX on firebase.User {
   AUser toDomain() {
     return AUser(

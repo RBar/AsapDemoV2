@@ -2,6 +2,8 @@
 import 'package:data_connection_checker/data_connection_checker.dart';
 import 'package:injectable/injectable.dart';
 
+// Nos informa si contamos con internet .
+
 abstract class NetworkInfo {
   Future<bool> get isConnected;
 }

@@ -1,5 +1,9 @@
 part of 'orderstodeliver_cubit.dart';
 
+// initial: estado inicial
+// loading: cargando la informacion
+// loaded: informacion cargada.
+// error: error al cargar la info
 @freezed
 abstract class OrderstodeliverState with _$OrderstodeliverState {
   const factory OrderstodeliverState.initial() = _Initial;
